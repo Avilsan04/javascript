@@ -4,7 +4,7 @@
 
 Es un sistema de control de versiones que nos permite almacenar nuestro código y los diferentes cambios que han hecho los desarrolladores.
 
-## CONCEPTOS
+## CONCEPTOSssssssssssssssss
 
 - **repositorio**: es el espacio donde se almacena el código y el historial de cambios, puede ser local o estar en un servidor como GitHub o GitLab
 - **rama** (branch): es una linea o versión independiente del código que permite que los desarrolladores no se pisen entre si.
