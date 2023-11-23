@@ -14,7 +14,7 @@ Es un sistema de control de versiones que nos permite almacenar nuestro código 
 
 
 
-## COMANDOS 
+## COMANDOS
 
 ## Clonar un proyecto
 sirve para crear y guardar por primera vez un repositorio del servidor en nuestro local.
@@ -70,7 +70,7 @@ git push
 git push origin <nombre de mi rama>
 
 # ejemplo
-git push origin task/arreglar_login
+git push origin main
 ```
 
 

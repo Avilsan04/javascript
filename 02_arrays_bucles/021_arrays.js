@@ -167,3 +167,19 @@ console.log(rickAndMortyCharacters[0], rickAndMortyCharacters[4]) */
 /* const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
 rickAndMortyCharacters.splice(1, 1);
 console.log(rickAndMortyCharacters); */
+
+
+/* Funcion para splice */
+
+const arrRecetas = ["Pizza", "Ensalada", "Sushi"]
+
+function deleteFromArray (element, myArray) {
+    let i = myArray.indexOf(element);
+    if (i !-- -1) {
+        myArray.splice(i, 1);
+    }
+}
+
+arrRecetas.forEach(item =>{
+    console.log(item);
+});

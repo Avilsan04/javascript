@@ -1,0 +1,24 @@
+<!-- Inserta dinamicamente con javascript en un html una p con el texto 'Soy dinámico!'. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insertar Párrafo Dinámico con JavaScript</title>
+</head>
+<body>
+
+
+    <div id="contenedor"></div>
+
+    <script>
+var nuevoParrafo = document.createElement("p");
+
+nuevoParrafo.textContent = 'Soy dinámico!';
+
+var contenedor = document.getElementById("contenedor");
+
+contenedor.appendChild(nuevoParrafo);
+
+    </script>
+</body>
+</html>

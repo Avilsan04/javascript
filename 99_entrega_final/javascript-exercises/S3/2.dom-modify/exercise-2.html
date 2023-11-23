@@ -1,0 +1,20 @@
+<!-- Inserta dinamicamente en un html un div que contenga una p con javascript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insertar Div con Párrafo usando JavaScript</title>
+</head>
+<body>
+    <div id="contenedor"></div>
+
+    <script>
+var contenedor = document.getElementById("contenedor");
+var nuevoDiv = document.createElement("div");
+var nuevoParrafo = document.createElement("p");
+nuevoParrafo.textContent = "Me llamo juan.";
+nuevoDiv.appendChild(nuevoParrafo);
+contenedor.appendChild(nuevoDiv);
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- En base al ejercicio anterior, crea un botón con el texto 'X' para cada uno de los p que hayas insertado y que si el usuario hace click en este botón eliminemos el parrafo asociado. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nameInput">
+    <button id="consultButton">Consultar</button>
+    <div id="results"></div>
+    <script>
+        const baseUrl = 'https://api.nationalize.io?name=';
+
+const consultButton = document.getElementById('consultButton');
+const nameInput = document.getElementById('nameInput');
+const resultsDiv = document.getElementById('results');
+
+consultButton.addEventListener('click', () => {
+const name = nameInput.value.trim();
+
+if (name !== '') {
+    fetch(baseUrl + name)
+    .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        showResults(data);
+    })
+    .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+    });
+} else {
+    console.log('Por favor, ingresa un nombre válido');
+}
+});
+
+function showResults(data) {
+resultsDiv.innerHTML = '';
+
+data.forEach(prediction => {
+    const p = document.createElement('p');
+    p.textContent = `El nombre ${prediction.name} tiene un ${Math.round(prediction.probability * 100)} porciento de ser de ${prediction.country_id}`;
+
+    const button = document.createElement('button');
+    button.textContent = 'Eliminar';
+    button.addEventListener('click', () => {
+    resultsDiv.removeChild(p);
+    resultsDiv.removeChild(button);
+    });
+
+    resultsDiv.appendChild(p);
+    resultsDiv.appendChild(button);
+});
+}
+
+    </script>
+</body>
+</html>

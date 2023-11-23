@@ -1,0 +1,24 @@
+<!-- Basandote en el siguiente html, añade un evento 'focus' que ejecute un console.log con el valor del input. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input type="text" id="inputField"/>
+
+  <script>
+
+var input = document.getElementById('inputField');
+
+input.addEventListener('focus', function(event) {
+    var valorInput = event.target.value;
+    console.log('Valor del input:', valorInput);
+});
+
+  </script>
+</body>
+</html>

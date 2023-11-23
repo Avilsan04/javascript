@@ -1,0 +1,24 @@
+<!-- Inserta dinamicamente en un html un div vacio con javascript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insertar Div con JavaScript</title>
+</head>
+<body>
+
+
+<div id="contenedor"></div>
+
+
+<script>
+
+var contenedor = document.getElementById("contenedor");
+var nuevoDiv = document.createElement("div");
+nuevoDiv.className = "nuevo-div";
+nuevoDiv.id = "miNuevoDiv";
+contenedor.appendChild(nuevoDiv);
+
+</script>
+</body>
+</html>
